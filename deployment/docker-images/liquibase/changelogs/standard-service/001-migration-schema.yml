@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: migration-schema
+      changes:
+        - sqlFile:
+            path: changesets/standard-service/up/001-table-user.sql
+            stripComments: true
+      rollback:
+        - sqlFile:
+            path: changesets/standard-service/down/001-table-user.sql
+            stripComments: true
